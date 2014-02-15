@@ -35,14 +35,14 @@ console.log("/project/"+idNumber);
 function getDetails(result){
 	console.log(result);
 	var id= result ['id'];
-	var projectID= "#project"+ id + ".details";
+	var projectID= "#project"+ id + ". details";
 	var detailsHTML= '<p>'+result['title']+ '</p>'+
 	'<p>' +result['date'] + '</p>'+
 	+
 	+ '<p>'+result['summary']+'</p>'
 	+'<a href="#" class="thumbnail" class="detailsImage">' + '<img src="'+result['image']+'</a>'
 	;
-	$("projectID").html(detailsHTML);
+	$(projectID).html(detailsHTML);
 
 }
 /*
@@ -51,7 +51,8 @@ function getDetails(result){
  */
 function randomizeColors(e) {
 	console.log("User clicked on color button");
-	$.get("/palette/"+getColor);
+	$.get("/palette/", 
+	getColor);
 
 }
 
