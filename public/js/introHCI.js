@@ -34,8 +34,7 @@ console.log("/project/"+idNumber);
 
 function getDetails(result){
 	console.log(result);
-	var id= result ['id'];
-	var projectID= "#project"+ id + ". details";
+	var projectID= "#project"+ result['id'] + ". details"; //These lines loosely based on help from Conner Jevning and lab slides
 	var detailsHTML= '<p>'+result['title']+ '</p>'+
 	'<p>' +result['date'] + '</p>'+
 	+
